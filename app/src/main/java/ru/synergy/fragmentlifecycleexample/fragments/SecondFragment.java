@@ -19,7 +19,7 @@ import ru.synergy.fragmentlifecycleexample.R;
  * Use the {@link SecondFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SecondFragment extends Fragment {
+public class SecondFragment extends androidx.fragment.app.Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -68,11 +68,11 @@ public class SecondFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View rootview = inflater.inflate(R.layout.fragment_first, container, false);
-        TextView tv = rootview.findViewById(R.id.tv);
+        View rootView = inflater.inflate(R.layout.fragment_first, container, false);
+        TextView tv = rootView.findViewById(R.id.tv);
         tv.setText(TAG + " layout");
         Log.d(TAG,"onCreateView");
-        return rootview;
+        return rootView;
     }
 
     @Override
